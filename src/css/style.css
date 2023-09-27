@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: beige;
+}
+
+#main{
+  display: grid;
+  grid-gap: 0.3rem;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+
+}
+
+img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+
+}
+
+
+/* ---------------------------- */
+.menu{
+  background-color: rgb(17, 17, 82);
+}
+
+
+.h1{
+  position: fixed;
+  top: -2%;
+  background-color: rgb(78, 40, 40);
+
+}
+
+.button-container {
+  position: fixed;
+  top: 5%;
+  padding: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* background: var(--nav-color); */
+    /* padding: 5px 1%; */
+    /* position: sticky; */
+    /* top: 0; */
+    /* z-index: 100; */
+}
+
+.button-container button {
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #3498db; /* Button background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin: 5px; /* Add margin for spacing */
+  
+}
+
+/* Individual styles for specific button classes */
+.button-container .modern {
+  background-color: #27ae60; /* Green background for Modern button */
+}
+
+.button-container .classic {
+  background-color: #e74c3c; /* Red background for Classic button */
+}
+
+.button-container .ganesha {
+  background-color: #f1c40f; /* Yellow background for Ganesha button */
+}
+
+.button-container .city {
+  background-color: #9b59b6; /* Purple background for City button */
+}
+.button-container .sculptures {
+  background-color: #9b59b6; /* Purple background for City button */
+}
+
+
+
+/* 
+=============================================================== */
+
+/* Style for the "like" button */
+.like-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+}
+
+.like-button i {
+  margin-right: 5px; /* Add space between icon and text */
+  font-size: 18px; /* Adjust icon size */
+  color: #ff5733; /* Color for unliked icon */
+}
+
+.like-button.liked i {
+  color: #e74c3c; /* Color for liked icon */
+}
+
+
+
+/* Style for the search co==========================ntainer */
+.search-container {
+  display: flex;
+  flex-direction: column 2;
+  align-items: flex-start;
+  margin: 20px;
+  transform: translateY(-10%);
+
+  margin-top: 1%;
+  right: 65%;
+  position: fixed;
+   /* Add margin-top to separate it from the button container */
+}
+
+/* Style for the search input */
+input[type="text"] {
+  width: 27%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the search button */
+#search-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin: 2px;
+}
+
+#search-button:hover {
+  background-color: #2980b9;
+}
+
+/* Style for the search results */
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* Style for individual search result images */
+.search-results img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+/* 
+mobile ========view css */
+/* Add a media query for iPhone 6/7/8 portrait mode */
+@media (max-width: 375px) and (max-height: 667px) {
+  /* Your mobile-specific styles here */
+  body {
+    font-size: 14px; /* Adjust font size for this specific device */
+  }
+
+  #main {
+    grid-template-columns: repeat(1, 1fr); /* Change grid layout to 1 column */
+    gap: 10px; /* Add some gap between grid items */
+  }
+
+  .button-container {
+    right: 5px; /* Adjust button container position */
+  }
+
+  .search-container {
+    right: 5%; /* Adjust search container position */
+    width: 90%; /* Adjust the width of the search input */
+  }
+
+  input[type="text"] {
+    width: 100%; /* Make the search input full width */
+  }
+
+  #search-button {
+    width: 100%; /* Make the search button full width */
+    margin-top: 10px; /* Add some spacing below the search button */
+  }
+}
